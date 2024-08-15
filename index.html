@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Áreas</title>
+    <script src="funciones.js"></script>
+    <style>
+        /* Aquí personalizas los estilos y colores */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #figureImage {
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+        #inputContainer {
+            margin: 20px 0;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #005315;
+            background-color: #abffb0;
+        }
+        #calculateBtn {
+            background-color: rgb(128, 1, 1);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #calculateBtn:hover {
+            background-color: rgb(109, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cálculo de Áreas</h1>
+        <select id="figureSelect" onchange="showInputsAndImage()">
+            <option value="">Seleccionar figura</option>
+            <option value="circulo">Círculo</option>
+            <option value="cuadrado">Cuadrado</option>
+            <option value="triangulo">Triángulo</option>
+        </select>
+        <button id="selectBtn" onclick="showInputsAndImage()">Seleccionar</button>
+        
+        <!-- Contenedor para la imagen -->
+        <div id="imageContainer">
+            <img id="figureImage" src="./images/descarga(45).jpeg" alt="Imagen de la figura seleccionada">
+        </div>
+        
+        <div id="inputContainer">
+            <!-- Aquí se generarán los inputs dinámicamente -->
+        </div>
+        
+        <button id="calculateBtn" onclick="calculateArea()">Calcular</button>
+        
+        <div id="result">
+            <p id="resultText">Colocar aquí el resultado en cada caso</p>
+        </div>
+    </div>
+</body>
+</html>
